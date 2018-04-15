@@ -10,6 +10,9 @@
     <style>
         #container{
             margin-top: 100px;
+        }
+    </style>
+</head>
 <body>
     <div id="container" class="container-fluid">
     <?php
