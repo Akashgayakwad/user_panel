@@ -11,14 +11,21 @@
         #container{
             margin-top: 100px;
         }
+        body{
+            color: burlywood;
+        }
+        tr, td{
+            text-align: center;
+        }
     </style>
 </head>
 <body>
     <div id="container" class="container-fluid">
     <?php
 session_start();
-include("connection.php");
-if($_SESSION)
+if($_SESSION['position'] =="admin")
+{    include("connection.php");
+    if($_SESSION)
   { $user_id=$_SESSION['user_id']; 
     $sql = "SELECT * FROM users WHERE user_id= $user_id";
     $result = mysqli_query($link, $sql);
@@ -36,19 +43,19 @@ if($_SESSION)
                 <div class='table-responsive'>
                     <table id='settingstable' class='table table-bordered table-hover'>
                         <tr>
-                            <td>User ID</td>
+                            <td><b>User ID</b></td>
                             <td>" . $row['user_id'] . "</td>
                         </tr>
                         <tr>
-                            <td>Username</td>
+                            <td><b>Username</b></td>
                             <td>" . $row['username'] . "</td>
                         </tr>
                         <tr>
-                            <td>Email</td>
+                            <td><b>Email</b></td>
                             <td>" . $row['email'] . "</td>
                         </tr>
                         <tr>
-                            <td>Password</td>
+                            <td><b>Password</b></td>
                             <td>" . $row['password'] . "</td>
                         </tr>
                     </table>
@@ -72,6 +79,10 @@ if($_SESSION)
     else{
         echo '<div class="alert alert-danger"><center><h1>SORRY! SESSION timed out.</h1></center></div>';
     }
+}
+else{
+    echo '<div class="alert alert-danger"><center><h1>SORRY! You are not an Admin.</br>Access Denied to other members.</h1></center></div>';
+}
 ?> 
 </div>
 </body>

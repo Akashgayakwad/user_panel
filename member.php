@@ -11,6 +11,12 @@
         #container{
             margin-top: 100px;
         }
+        body{
+            color: burlywood;
+        }
+        tr, td{
+            text-align: center;
+        }
     </style>
 </head>
 <body>
@@ -36,19 +42,19 @@ if($_SESSION)
                 <div class='table-responsive'>
                     <table id='settingstable' class='table table-bordered table-hover'>
                         <tr>
-                            <td>User ID</td>
+                            <td><b>User ID</b></td>
                             <td>" . $row['user_id'] . "</td>
                         </tr>
                         <tr>
-                            <td>Username</td>
+                            <td><b>Username</b></td>
                             <td>" . $row['username'] . "</td>
                         </tr>
                         <tr>
-                            <td>Email</td>
+                            <td><b>Email</b></td>
                             <td>" . $row['email'] . "</td>
                         </tr>
                         <tr>
-                            <td>Password</td>
+                            <td><b>Password</b></td>
                             <td>" . $row['password'] . "</td>
                         </tr>
                     </table>

@@ -66,6 +66,7 @@ else{
                     $_SESSION['user_id']=$row['user_id'];
                     $_SESSION['username']=$row['username'];
                     $_SESSION['email']=$row['email'];
+                    $_SESSION['position']=$row['position'];
                     $position=$row['position'];
                     if($position =="admin")
                     {echo "successadmin";}

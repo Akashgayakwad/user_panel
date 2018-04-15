@@ -14,6 +14,12 @@
         text-decoration: underline;
         font-weight: 100;
     }
+    body{
+            color: burlywood;
+        }
+        tr, td{
+            text-align: center;
+        }
     button{
         margin: 5px 0px;
     }
@@ -30,7 +36,7 @@ echo '<div class="alert alert-danger"><strong><p>Sorry!Unable to Fetch Users.</p
 }
 else
 {  
-echo'<center><h1><strong>ALL USERS DETAILS</strong></h1></center>';
+echo'<div class="table-responsive"><center><h1><strong>ALL USERS DETAILS</strong></h1></center>';
 
 echo '<center>
        <table class="table table-bordered table-hover">
@@ -61,10 +67,11 @@ echo '</table>
     {
         echo'<option value="' . $row[user_id] . '">' . $row['user_id'] .'</option>';
     }
-    echo '</select>
+    echo '</select></br>
     <button type="submit" name="selectuser" value="selected" class="btn btn-lg btn-info">Make Admin</button>
-          <form>
-          </center>';
+          </br><form>
+          </center>
+          </div>';
 ?>
 <script src="js/jquery-2.0.3.min.js"></script>
 <script src="js/bootstrap.min.js"></script>

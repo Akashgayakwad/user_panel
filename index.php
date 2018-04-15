@@ -4,8 +4,9 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width initial-scale=1.0 user-scalable=yes">
     <title>Login/Signup</title>
+    <link rel="stylesheet" href="style.css">
     <link href="css/bootstrap.min.css" rel="stylesheet">
-      <link href="style.css" rel="stylesheet">
+    
 </head>
 <style>
     .jumbotron{
@@ -14,14 +15,28 @@
     #loginjumbo{
         height: ;
     }
-    
+    .header{
+        color:burlywood;
+    }
+    h1{
+        word-spacing: 5px;
+        letter-spacing: 2px;
+        font-stretch: expanded;
+        text-decoration: underline;
+    }
+    .row{
+        border-top-style: groove;
+    }
+    .jumbotron{
+        margin-top: 10px;
+    }
 </style>
     
 <body>
 <!--header-->
     <center>
-    <h1 class="header">Welcome to the page.</h1>
-    <marquee><h3 class="header">We hope that you will have a great experience!</h3></marquee>
+    <h1 class="header"><b><em>Welcome to the page.</em></b></h1>
+    <marquee><h3 class="header">We hope that you will have a great experience here!</h3></marquee>
     </center>
     <div class="row">
             <!--Login Form-->
