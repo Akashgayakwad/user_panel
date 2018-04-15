@@ -5,11 +5,13 @@ session_start();
 include("connection.php");
 //Check user inputs
     //Define error messages
+$errors="";
+$email="";
+$password="";
 
 
-
-$missingEmail = '<p><small>Please enter your email address!</small></p>';
-$missingPassword = '<p><small>Please enter your password!</small></p>'; 
+$missingEmail = "<p><small>Please enter your email address!</small></p>";
+$missingPassword = "<p><small>Please enter your password!</small></p>"; 
     //Get email and password
     //Store errors in errors variable
 

@@ -22,7 +22,7 @@ $("#signupform").submit(function(event){
 
 
 
-("#loginform").submit(function(event){ 
+$("#loginform").submit(function(event){ 
     event.preventDefault();
     var datatopost1 = $(this).serializeArray();
     console.log(datatopost1);
