@@ -7,7 +7,11 @@ $("#signupform").submit(function(event){
         type: "POST",
         data: datatopost,
         success: function(data){
-            if(data){
+            /*if(data == "registered")
+                {
+                    window.location.href="member.php";
+                }
+            else */if(data){
                 $("#signupmessage").html(data);
             }
         },

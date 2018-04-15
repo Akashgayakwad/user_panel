@@ -95,9 +95,13 @@
     }
 
 
-    $sql ="INSERT INTO users ('username','email','password') VALUES ('$username','$email','$password')";
+    $sql ="INSERT INTO users (username,email,password) VALUES ('$username','$email','$password')";
     $result = mysqli_query($link, $sql);
-    if(!$result){
+        if($result){
+            echo "<div class='alert alert-success'><strong><h2>User Registered</h2><p>Thankyou!For registering with us. Kindly Log In!</p></div>";
+        }
+
+        else{
         echo '<div class="alert alert-danger">There was an error inserting the user details in the database!</div>';
         exit;
     }

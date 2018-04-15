@@ -34,7 +34,7 @@ if($_SESSION)
             <div class='col-md-offset-3 col-md-6'>
                 <h2 id='tableheading'>General Account Settings:</h2>
                 <div class='table-responsive'>
-                    <table id='settingstable' class='table table-bordered table-hover table-condensed'>
+                    <table id='settingstable' class='table table-bordered table-hover'>
                         <tr>
                             <td>User ID</td>
                             <td>" . $row['user_id'] . "</td>
